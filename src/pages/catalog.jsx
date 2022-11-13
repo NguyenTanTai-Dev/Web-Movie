@@ -5,7 +5,7 @@ import {useParams} from 'react-router';
 import PageHeader from '../components/page-header/PageHeader';
 
 import {category as cate} from '../Api/tmdbApi';
-import MovieGrid from '../components/movie-grid/MovieGrid';
+import MovieGird from '../components/movie-grid/MovieGrid';
 const Catalog = () => {
 
   const {category} = useParams();
@@ -22,6 +22,11 @@ const Catalog = () => {
         <PageHeader>
             {currCate}
         </PageHeader>
+        <div className="container">
+          <div className="section md-3">
+            <MovieGird category={category}/>
+          </div>
+        </div>
     </>
   );
 }

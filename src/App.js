@@ -6,27 +6,19 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Header from './components/header/header';
 import Routes from './config/Routes';
-import Footer from './components/footer/footer';
+import Footer from './components/footer/Footer';
 
 function App() {
-    return ( <
-        BrowserRouter >
-        <
-        Route render = {
-            props => ( <
-                >
-                <
-                Header {...props }
-                />   <
-                Routes / >
-                <
-                Footer / >
-                <
-                />
+    return ( <BrowserRouter >
+        <Route render = {
+            props => ( <>
+                <Header {...props }/> 
+                <Routes / >
+                <Footer / >
+                </>
             )
-        }
-        />  <
-        /BrowserRouter>
+        }/>
+        </BrowserRouter>
     );
 }
 
